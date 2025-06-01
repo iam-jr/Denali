@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <title>Denali</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Your-Cool-Font&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="js/script.js" defer></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="img/denalilogonoback.png" alt="Denali Fashion Shop Logo">
+            </a>
+        </div>
+    </header>
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1>WELCOME TO DENALI</h1>
+            <p>We have unique items. Distinguishing the client and taking him to an exclusivity when making use of any of our pieces or accessories.</p>
+            <img src="img/denalilogo3dnoback.png" alt="Denali Image" class="hero-image">
+        </div>
+    </section>
+
+
+    <!-- Add the line separator here -->
+    <div class="line-separator">
+        <div class="button-container">
+        <a href="products.html" class="cta-button">Shop Now</a>
+        </div>
+    </div>
+
+    
+    
+
+       <!-- Products Section -->
+       <section id="products">
+        <div class="product-categories">
+            <h2>The World Is Yours</h2>
+
+            <!-- Categories Container (Horizontal Layout) -->
+            <div class="categories-row">
+                <!-- Men’s Fashion Categories -->
+                <div class="category">
+                    <h3>Men</h3>
+                    <div class="category-items">
+                        <a href="men-tops.html">
+                            <i class="fas fa-tshirt"></i>
+                            <h4>Men’s Top</h4>
+                        </a>
+                       
+                        <a href="men-shoes.html">
+                            <i class="fas fa-shoe-prints"></i>
+                            <h4>Men’s Shoes</h4>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Future Categories -->
+                <div class="category">
+                    <h3>Accessories</h3>
+                    <div class="category-items">
+                        <a href="shoes.html">
+                            <i class="fas fa-socks"></i>
+                            <h4>Footwear</h4>
+                        </a>
+                        <a href="bags.html">
+                            <i class="fas fa-bag-shopping"></i>
+                            <h4>Backpacks</h4>
+                        </a>
+                        <a href="hats.html">
+                            <i class="fas fa-hat-cowboy"></i>
+                            <h4>Hats</h4>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Women’s Fashion Categories -->
+                <div class="category">
+                    <h3>Women</h3>
+                    <div class="category-items">
+                        <a href="women-tops.html">
+                            <i class="fas fa-tshirt"></i>
+                            <h4>Women’s Top</h4>
+                        </a>
+                       
+                        <a href="women-shoes.html">
+                            <i class="fas fa-shoe-prints"></i>
+                            <h4>Women’s Shoes</h4>
+                        </a>
+                    </div>
+                </div>
+
+</section>
+<section>
+    <!-- Featured Products Section -->
+<div class="featured-products">
+    <h2>Exclusive</h2>
+    <div class="featured-items">
+        <div class="product">
+            <img src="img/denali-prod-1.avif" alt="Featured Product 1">
+            <h4>Denali Hoodie</h4>
+            <a href="product-detail1.html">Buy</a>
+        </div>
+        <div class="product">
+            <img src="img/denali-prod-3.avif" alt="Featured Product 3">
+            <h4>Denali Over Size Shirt</h4>
+            <a href="product-detail3.html">Buy</a>
+        </div>
+        <div class="product">
+            <img src="img/denali-prod-2.avif" alt="Featured Product 2">
+            <h4>Denali Hoodie Moon</h4>
+            <a href="product-detail2.html">Buy</a>
+        </div>
+    
+    </div>
+</div>
+
+</section>
+<section>        <!-- Top Trends Section -->
+        <div class="top-trends">
+            <h2>Top Sales</h2>
+            <div class="trend-items">
+                
+                <div class="trend-item">
+                    <img src="img/logodinaliletters.jpg" alt="Trend 3">
+                    <h4>Denali 3D Sticker</h4>
+                    <a href="dresses.html">Shop Now</a>
+                </div>
+                <div class="trend-item">
+                    <img src="img/denalimovie.png" alt="Trend 2">
+                    <h4>Denali: The Movie</h4>
+                    <a href="denali-movie.html">Shop Now</a>
+                    
+                </div>
+                <div class="trend-item">
+                    <img src="img/dinalilogo.jpg" alt="Trend 1">
+                    <h4>Denali Sticker</h4>
+                    <a href="jackets.html">Shop Now</a>
+                </div>
+            </div>
+
+        </div>
+        
+    </section>
+
+    <!-- Floating Button -->
+<div id="radioButton" class="floating-btn">
+  <button onclick="toggleRadio()">🎧</button>
+</div>
+
+<!-- Pop-Up Container -->
+<div id="radioPopup" class="radio-popup">
+  <button class="close-btn" onclick="toggleRadio()">✖</button>
+  <div id="radioPlayer" class="player-container">
+    <!-- Embed Your Radio Stream or YouTube Video Here -->
+    <iframe width="1920" height="1080" src="https://www.youtube.com/embed/wVDEalPfxRU?si=kaVpmirDmuiPPJ-3&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+</div>
+
+    <!-- Footer -->
+    <footer>
+    
+        <!-- Right Side: Footer Sections -->
+        
+        <div class="footer-right">
+            <!-- Customer Service Links -->
+            <div class="footer-section">
+                <h3>Customer Service</h3>
+                <ul>
+                    <li><a href="faq.html">FAQs</a></li>
+                    <li><a href="support.html">Support</a></li>
+                    <li><a href="shipping-returns.html">Shipping & Returns</a></li>
+                    <li><a href="order-status.html">Order Status</a></li>
+                    <li><a href="warranty.html">Warranty</a></li>
+                    <li><a href="payment-methods.html">Payment Methods</a></li>
+                    <li><a href="product-registration.html">Product Registration</a></li>
+                </ul>
+            </div>
+
+            <!-- Company Information Links -->
+            <div class="footer-section">
+                <h3>Company Information</h3>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="careers.html">Careers</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms & Conditions</a></li>
+                    <li><a href="sitemap.html">Sitemap</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Information Links -->
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="find-location.html">Find a Location</a></li>
+                    <li><a href="help-center.html">Help Center</a></li>
+                    <li><a href="live-chat.html">Live Chat</a></li>
+                    <li><a href="email-support.html">Email Support</a></li>
+                </ul>
+            </div>
+ 
+            <!-- Legal Links -->
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="cookie-policy.html">Cookie Policy</a></li>
+                    <li><a href="accessibility.html">Accessibility</a></li>
+                    <li><a href="corporate-responsibility.html">Corporate Responsibility</a></li>
+                </ul>
+            </div>
+        </div>
+         <!-- Instagram Icon Section -->
+  <!-- Social Media Section -->
+  <div class="footer-section">
+    <h3>Follow Us</h3>
+    <div class="social-media">
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/__denali" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" width="48" height="48">
+    </div>
+</div>
+    </div>
+
+    </footer>       
+
+</body>
+</html>

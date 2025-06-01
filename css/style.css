@@ -1,0 +1,722 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(45deg, #7f00ff, #00b3b3, #ff00ff, #9933cc);
+    background-size: 400% 400%;
+    color: #fff;
+    overflow-x: hidden;
+    position: relative;
+    line-height: 0.6;
+    height: 100vh;
+    scroll-behavior: smooth;
+    padding-top: 1px; /* Ensure that the header content doesn't overlap the body */
+}
+
+/* Header */
+header {
+    background: linear-gradient(45deg, #7f00ff, #00b3b3, #ff00ff, #9933cc);
+    color: #000;
+    padding: 20px 0;
+    padding-top: 50px;
+    display: flex;
+    justify-content: center; /* Center the logo and nav */
+    align-items: center;
+    position: fixed;
+    top: 0; /* Ensures the header stays at the top */
+    width: 100%;
+    z-index: 1000;
+    backdrop-filter: blur(0.5px);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    border-bottom: none; /* Remove any border below header */
+}
+
+header .logo {
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); /* Center logo horizontally */
+}
+
+header .logo img {
+    max-width: 200px;
+    transition: transform 0.3s ease;
+}
+
+header .logo img:hover {
+    transform: scale(1.1);
+}
+
+/* Navigation Styling */
+header nav {
+    position: absolute;
+    right: 5%;
+    display:flex;
+    align-items: center;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+header nav ul li {
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: transform 0.3s ease;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #ff00ff;
+    transform: scale(1.1);
+}
+/* Hero Section (Main Banner) */
+.hero-section {
+    background-color: #000; /* Background color */
+    height: 80vh; /* Adjust to fit between header and products */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 0; /* Remove padding */
+    z-index: 1;
+    text-align: center; /* Center text horizontally */
+}
+
+/* Content inside the hero section */
+.hero-content {
+    color: white;
+    padding: 20px; /* Reduced padding for better spacing */
+    max-width: 1080px; /* Adjust max width */
+    margin-top: 80px; /* Centers the content horizontally */
+}
+
+/* Heading inside hero content */
+.hero-content h1 {
+    font-size: 4rem;
+    margin: 20px;
+    margin-top: 90px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    margin-bottom: 15px; /* Added margin to space out from the paragraph */
+}
+
+/* Paragraph inside hero content */
+.hero-content p {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    font-weight: 200;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    line-height: 1.8;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+/* Call to Action Button */
+.cta-button {
+    background-color: #ff00ff;
+    color: #fff;
+    text-decoration: none;
+    padding: 20px 40px; /* Increased padding for a more prominent button */
+    font-size: 1.2rem;
+    border-radius: 5px;
+    align-items: center;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 4px; /* Ensures spacing between text and button */
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #1079c4d2; /* Hover color */
+}
+.button-container {
+    display:grid;
+    justify-content: center;
+    align-items: center;
+}
+.line-separator {
+    width: 100%;
+    height: 3px; /* Height of the line */
+    background-color: #00b3b3; /* Line color */
+    margin-top: 50px; /* Space from previous content */
+}
+
+
+
+
+/* Products Section */
+#products {
+    margin-top: 100px;
+    padding: 100px 20px 40px;
+    text-align: center;
+    background: #eddfdf;
+}
+
+.product-categories h2 {
+    font-size: 96px;
+    color: #121212;
+    margin-bottom: 80px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 600;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+}
+.product-categories h3 {
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 600;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+}
+
+.product a {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #00e33197; /* Orange color */
+    color: #fff;
+    font-size: 24px;
+    justify-content: center;
+    margin: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.product h4 {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #00b3b3; /* Orange color */
+    color: #fff;
+    font-size: 12px;
+    justify-content: center;
+    margin: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.product a:hover {
+    background-color: #01983eac; /* Lighter orange */
+    transform: scale(1.5);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.product a:active {
+    background-color: #01983dcf; /* Original orange */
+    transform: scale(1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.categories-row {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.category {
+    width: 30%;
+    background-color: #222;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+}
+
+.category h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #ff00ff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.category-items {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.category-items a {
+    display: block;
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 15px;
+    transition: color 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+}
+
+.category-items a i {
+    font-size: 50px;
+    margin-bottom: 15px;
+    transition: color 0.3s ease;
+}
+
+.category-items a:hover i {
+    color: #00b3b3;
+}
+
+.category-items a:hover {
+    transform: scale(1.1);
+}
+
+/* Featured Products Section */
+.featured-products {
+    padding: 60px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.featured-products h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #000000;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 600;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+}
+
+.featured-items {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.product {
+    width: 30%;
+    background-color: #17bdb29c;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+}
+
+.product img {
+    margin-right: 40px;
+    height: 360px;
+    border-radius: 8px;
+}
+
+.product h4 {
+    margin-top: 28px;
+    font-size: 24px;
+    color: #ffffff;
+}
+
+.product p {
+    font-size: 48px;
+    margin: 20px;
+    color: #0080ff;
+}
+
+.top-trends {
+    padding: 80px 20px;
+    background-color: #121212;
+    text-align: center;
+}
+
+.top-trends h2 {
+    font-size: 40px;
+    margin-bottom: 40px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: 700;
+    text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.8);
+}
+
+.trend-items {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.trend-item {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.8);
+    overflow: hidden;
+    width: 300px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align content from top */
+    align-items: center;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.trend-item-1-2 {
+    width: 300px;
+    height: 400px;
+}
+
+.trend-item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    justify-content: center;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.trend-item h4 {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    font-size: 24px;
+    margin: 15px 0;
+    font-weight: 600;
+}
+
+.trend-item a {
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+    margin-top: 15px;
+    text-transform: uppercase;
+    color: #0080ff;
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: none;
+    letter-spacing: 1px;
+    padding: 10px 20px;
+    border: 2px solid #0080ff;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.trend-item a:hover {
+    color: #fff;
+    background-color: #0080ff;
+    border-color: #0080ff;
+}
+
+.trend-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+}
+
+/* Trend 3 - Centered, cinematic look */
+.trend-item:nth-child(2) {  /* For Trend 3 */
+    width: 10 80px;  /* Wider for a cinematic feel */
+    height: 550px;  /* Taller for a movie-poster effect */
+}
+
+/* For the 3rd Trend (center) */
+.trend-item:nth-child(2) img {
+    width: 100%;         /* Fill the container width */
+    height: 100%;        /* Fill the container height */
+    object-fit: cover;   /* Cover the container, maintaining aspect ratio */
+}
+
+
+.trend-item:nth-child(2) h4 {
+    font-size: 28px;  /* Bigger title for Trend 3 */
+    margin-top: 20px;
+}
+
+.trend-item:nth-child(2) a {
+    font-size: 20px;
+    padding: 12px 25px;
+    margin-top: 20px;
+}
+
+
+
+/* Footer Section */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* Footer Container */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Styling for the footer logo */
+.footer-logo img {
+    width: 90px;
+    height: auto;
+    margin-bottom:50px; /* Space between logo and social icons */
+}
+
+
+/* Right Side: Footer Sections */
+.footer-right {
+    width: 70%;
+    min-height: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;  /* Keeps sections spaced apart */
+    align-items: center; /* Vertically center content */
+    margin-bottom: 20px; /* Center the right section */
+}
+
+/* Footer Sections */
+.footer-section {
+    width: 23%;
+    padding: 20px;
+    margin-bottom: 20px; /* Center the right section */
+    box-sizing: border-box;  /* Added this for padding to not affect width */
+}
+
+.footer-section h3 {
+    color: #ffffff; /* Adjust as needed */
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #fff;
+}
+
+
+.footer-bottom {
+    background-color: #f4f4f4;
+    color: #271407;
+    text-align: center;
+    padding: 10px;
+    margin-top: 40px;  /* Pushes the copyright text lower */
+    margin-bottom: -100px;  /* Removes space after the footer */
+}
+/* General Styling for About Us Section */
+
+social-media {
+    font-size: 90px;
+    align-items: center;
+    margin-left: 1248px;
+}
+
+social-media a {
+    color: #ff00ff;
+    text-decoration: none;
+    margin: 0px;
+    font-size: 90px;
+}
+
+social-media img:hover {
+    color: #ffffff7e;
+    width: 50px;
+    height: 50px;
+    transform: scale(1.4)
+}
+/* Floating Button */
+.floating-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.floating-btn button {
+    background: linear-gradient(45deg, #7f00ff, #00b3b3, #9933cc);
+    border: none;
+    padding: 15px;
+    margin-bottom: 12px;
+    border-radius: 50%;
+    font-size: 84px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Pop-Up Styling */
+.radio-popup {
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    margin-right: 120px;
+    width: 10 80px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    display: none;
+    z-index: 100;
+}
+
+.radio-popup iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 8px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: #ff0000;
+    color: white;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+}
+
+/* Media Queries for Mobile */
+@media (max-width: 768px) {
+    /* Header */
+    header nav ul {
+        gap: 15px;
+        justify-content: center; /* Centering nav items */
+    }
+
+    /* Hero Section */
+    .hero-section {
+        height: 60vh; /* Adjusted height for smaller screens */
+        padding: 0 20px; /* Padding adjustment for better spacing */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 0 20px; /* Add padding for spacing */
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 2.2rem; /* Smaller heading for mobile */
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+
+    .hero-content p {
+        font-size: 1.5rem; /* Smaller font size for mobile */
+        line-height: 1.4;
+        margin-bottom: 20px; /* Reduced margin to fit on smaller screens */
+    }
+
+    .cta-button {
+        padding: 15px 30px;
+        font-size: 1rem;
+        background-color: #0080ff;
+        margin-top: 10px;
+        display: inline-block;
+    }
+
+    .hero-section img {
+        width: 100%; /* Make image responsive */
+        height: auto; /* Maintain aspect ratio */
+        object-fit: cover; /* Ensure the image covers the section properly */
+    }
+
+    /* Category Section */
+    .categories-row {
+        flex-direction: column; /* Stack categories vertically */
+        gap: 15px;
+    }
+
+    .category {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    /* Product Section */
+    .product {
+        width: 100%;
+    }
+
+    .featured-products h2 {
+        word-spacing: 0.5rem;
+    }
+
+    /* Footer Section */
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-right {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .footer-section {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    /* Trend Section */
+    .trend-items {
+        flex-direction: column;
+        align-items: center; /* Align trend items vertically */
+    }
+
+    .trend-item {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}
