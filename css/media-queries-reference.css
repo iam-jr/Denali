@@ -1,0 +1,246 @@
+/* 
+ * GUÍA DE DEBUGGING RESPONSIVE
+ * Para revisar cómo se ve en cada dispositivo
+ */
+
+/* ==================================
+   VERIFICACIÓN DE VIEWPORT
+   ================================== */
+
+/* Mostrar ancho actual (solo para debugging, remover en producción) */
+body::before {
+    content: "";
+    display: none;
+}
+
+/* ==================================
+   IPHONE SE (375px)
+   ================================== */
+@media only screen and (max-width: 375px) {
+    /* Si ves esto, estás en un iPhone SE */
+    header .logo img {
+        max-width: 100px;
+    }
+    
+    .hero-content h1 {
+        font-size: 1.5rem;
+    }
+    
+    .cta-button {
+        width: 90%;
+        margin: 15px auto;
+    }
+}
+
+/* ==================================
+   IPHONE 12/13/14 (390px)
+   ================================== */
+@media only screen and (max-width: 390px) {
+    header {
+        padding: 10px 15px;
+    }
+    
+    .product-categories h2 {
+        font-size: 2rem;
+    }
+}
+
+/* ==================================
+   IPHONE PRO MAX (428px)
+   ================================== */
+@media only screen and (max-width: 430px) {
+    /* Mayor espacio de trabajo */
+    header .logo img {
+        max-width: 110px;
+    }
+}
+
+/* ==================================
+   SAMSUNG GALAXY S21 (360px)
+   ================================== */
+@media only screen and (max-width: 360px) {
+    /* Uno de los dispositivos más pequeños */
+    .hero-content p {
+        font-size: 0.85rem;
+    }
+    
+    .category-items a i {
+        font-size: 25px;
+    }
+}
+
+/* ==================================
+   LANDSCAPE ORIENTATION
+   ================================== */
+@media only screen and (orientation: landscape) and (max-height: 500px) {
+    .hero-section {
+        min-height: auto;
+        padding: 60px 15px 20px;
+    }
+    
+    .hero-content h1 {
+        font-size: 1.5rem;
+        margin: 5px 0;
+    }
+    
+    .hero-content p {
+        margin-bottom: 10px;
+        font-size: 0.9rem;
+    }
+    
+    .cta-button {
+        padding: 10px 20px;
+        font-size: 0.85rem;
+    }
+}
+
+/* ==================================
+   IPAD PORTRAIT (768px)
+   ================================== */
+@media only screen and (min-width: 769px) and (max-width: 1024px) and (orientation: portrait) {
+    .category {
+        width: 48%;
+    }
+    
+    .featured-items {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .trend-items {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ==================================
+   IPAD LANDSCAPE (1024px)
+   ================================== */
+@media only screen and (min-width: 1025px) and (max-width: 1366px) and (orientation: landscape) {
+    .categories-row {
+        gap: 20px;
+    }
+}
+
+/* ==================================
+   DESKTOP (1200px+)
+   ================================== */
+@media only screen and (min-width: 1200px) {
+    .category {
+        width: 30%;
+    }
+}
+
+/* ==================================
+   HIGH DPI DEVICES (Retina)
+   ================================== */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    img {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+}
+
+/* ==================================
+   TOUCH DEVICES
+   ================================== */
+@media (hover: none) and (pointer: coarse) {
+    /* Aumentar tamaño de touch targets */
+    a, button {
+        min-height: 48px;
+        min-width: 48px;
+    }
+    
+    /* Remover hover states en touch devices */
+    a:hover {
+        transform: none;
+    }
+    
+    /* Agregar padding para mejor tactilidad */
+    .cta-button {
+        padding: 18px 40px;
+    }
+}
+
+/* ==================================
+   DARK MODE
+   ================================== */
+@media (prefers-color-scheme: dark) {
+    /* Los cambios de color ya están incluidos en style.css */
+    /* Pero aquí puedes agregar ajustes específicos para dark mode si es necesario */
+}
+
+/* ==================================
+   REDUCED MOTION (Accesibilidad)
+   ================================== */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* ==================================
+   PRINT STYLES
+   ================================== */
+@media print {
+    header, 
+    footer, 
+    .floating-btn,
+    .mobile-overlay {
+        display: none;
+    }
+    
+    body {
+        background: white;
+        color: black;
+    }
+    
+    a {
+        color: #0066cc;
+        text-decoration: underline;
+    }
+}
+
+/* ==================================
+   FOLDABLE DEVICES (Samsung Z Fold)
+   ================================== */
+@media (screen-spanning: single-fold-vertical) {
+    /* Si el dispositivo está doblado verticalmente */
+    .hero-section {
+        padding: 40px 20px;
+    }
+}
+
+@media (screen-spanning: single-fold-horizontal) {
+    /* Si el dispositivo está doblado horizontalmente */
+    .hero-section {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+/* ==================================
+   COMPARATIVA DE BREAKPOINTS
+   ================================== */
+
+/*
+DISPOSITIVO                  ANCHO       BREAKPOINT USADO
+─────────────────────────────────────────────────────────
+iPhone SE                    375px       max-width: 480px
+iPhone 12/13/14             390px       max-width: 768px  
+iPhone 12/13/14 Pro Max     428px       max-width: 768px
+Samsung Galaxy S21          360px       max-width: 480px
+Samsung Galaxy S21 Ultra    515px       max-width: 768px
+Google Pixel 6              412px       max-width: 768px
+OnePlus 11 Pro              480px       max-width: 480px
+
+iPad (7th Gen)              810px       max-width: 1024px
+iPad Pro 11"                1024px      desktop (1024px+)
+iPad Pro 12.9"              1366px      desktop
+iPad Air                    820px       max-width: 1024px
+
+MacBook Air                 1440px      desktop
+MacBook Pro                 1728px      desktop
+Desktop (Standard)          1920px      desktop
+Desktop (4K)                3840px      desktop
+*/

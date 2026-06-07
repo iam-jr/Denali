@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="description" content="Denali - Exclusive Fashion E-Commerce">
+    <title>Denali - Premium Fashion</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Your-Cool-Font&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="js/script.js" defer></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <!-- Favicon & PWA -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png?v=20260507b">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png?v=20260507b">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png?v=20260507b">
+    <link rel="shortcut icon" href="favicon_io/favicon.ico?v=20260507b">
+    <link rel="manifest" href="favicon_io/site.webmanifest?v=20260507b">
+    <meta name="theme-color" content="#0a1116">
+    <meta name="application-name" content="Denali Luxury">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <style>
+        :root {
+            --parallax-intensity: 0.12;
+        }
+        
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background: url('img/movingstars.gif') repeat;
+            background-size: 1024px 1024px;
+            background-attachment: fixed;
+            z-index: -3;
+            pointer-events: none;
+        }
+        
+        .layer-glow {
+            position: fixed;
+            inset: 0;
+            background:
+              radial-gradient(800px 800px at 20% 25%, rgba(156,199,255,0.08), transparent 60%),
+              radial-gradient(900px 900px at 80% 35%, rgba(199,165,255,0.10), transparent 60%),
+              radial-gradient(700px 700px at 50% 70%, rgba(122,176,255,0.06), transparent 60%);
+            z-index: -2;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Fondo de estrellas animadas -->
+    <div class="layer-glow" aria-hidden="true"></div>
+
+    <!-- Header (idéntico al de products.html) -->
+    <header>
+        <div class="topbar">
+            <button class="search-btn" aria-label="Buscar">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="7"></circle>
+                    <path d="M21 21l-4.3-4.3"></path>
+                </svg>
+            </button>
+            <div class="logo">
+                <img src="img/logodenaliognb.png" alt="DENALI">
+            </div>
+            <button class="hamburger" aria-label="Menú" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+
+        <nav class="nav-panel" aria-label="Menú de navegación">
+            <a href="products.html">Tienda</a>
+            <a href="men-tops.html">Para él</a>
+            <a href="women-tops.html">Para ella</a>
+            <a href="FAQ.html">FAQ</a>
+            <a href="shipping.html">Envíos</a>
+            <div class="nav-panel-footer">
+                <div class="nav-footer-links">
+                    <a href="https://www.instagram.com/__denali" target="_blank">Instagram</a>
+                    <a href="#">Twitter</a>
+                    <a href="#">TikTok</a>
+                </div>
+                <div class="nav-footer-copy">© 2026 DENALI LUXURY</div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Search Overlay -->
+    <div id="searchOverlay" class="search-overlay" aria-hidden="true">
+        <div class="search-modal">
+            <button class="search-close" aria-label="Cerrar búsqueda">&times;</button>
+            <div class="search-input-row">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="7"></circle>
+                    <path d="M21 21l-4.3-4.3"></path>
+                </svg>
+                <input id="searchInput" type="text" placeholder="Buscar productos..." autocomplete="off" />
+            </div>
+            <div id="searchResults" class="search-results"></div>
+            <div class="search-footer">Sugerencias: Hoodie, Camisa, Chaqueta</div>
+        </div>
+    </div>
+    <section class="hero-section">
+        <div class="hero-container">
+            <!-- Left Content -->
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Moda
+                    <span class="title-accent">Exclusiva</span>
+                </h1>
+
+                <p class="hero-subtitle">
+                    Marca de moda exclusiva inspirada en Puerto Rico
+                </p>
+
+                <div class="hero-cta-group">
+                    <a href="products.html" class="btn btn-primary">
+                        EXPLORAR COLECCIÓN
+                    </a>
+                    <a href="#about" class="btn btn-ghost">
+                        SOBRE DENALI
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="hero-image-wrapper">
+                    <img src="img/denali-prod-1.png" alt="Denali Luxury" class="hero-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Denali Section -->
+    <section class="about-denali-section" id="about">
+        <div class="about-denali-container">
+            <div class="about-denali-content">
+                <h2 class="about-title">
+                    Sobre
+                    <span class="title-accent">Denali</span>
+                </h2>
+                <p class="about-text">
+                    Marca de moda exclusiva inspirada en la altura, la precisión y el poder silencioso.
+                </p>
+                <p class="about-text">
+                    Cada prenda es creada con intención, cuidando cada detalle y manteniendo una producción limitada.
+                </p>
+                <div class="about-highlights">
+                    <div class="highlight-item">
+                        <span class="highlight-icon">🚚</span>
+                        <h3>Envío Express Gratis</h3>
+                        <p>Entrega rápida y segura en todas tus compras</p>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="highlight-icon">🛡️</span>
+                        <h3>Garantía Premium</h3>
+                        <p>Calidad asegurada al 100% en cada prenda</p>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="highlight-icon">💬</span>
+                        <h3>Soporte VIP 24/7</h3>
+                        <p>Atención personalizada para todas tus consultas</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- About Visual -->
+            <div class="about-visual">
+                <div class="about-image-wrapper">
+                    <img src="img/logodenalinoback.png" alt="Denali Luxury Reference" class="about-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories-section">
+        <div class="categories-container">
+            <div class="section-header">
+                <h2 class="section-title">COLECCIONES</h2>
+                <p class="section-subtitle">Explora nuestra selección exclusiva</p>
+            </div>
+
+            <div class="categories-grid">
+                <a href="men-tops.html" class="category-card">
+                    <div class="category-card-content">
+                        <span class="category-icon">👔</span>
+                        <h3>HOMBRE</h3>
+                        <p>Sastrería urbana y premium</p>
+                    </div>
+                </a>
+
+                <a href="women-tops.html" class="category-card">
+                    <div class="category-card-content">
+                        <span class="category-icon">✨</span>
+                        <h3>MUJER</h3>
+                        <p>Elegancia arquitectónica</p>
+                    </div>
+                </a>
+
+                <a href="products.html#kids" class="category-card">
+                    <div class="category-card-content">
+                        <span class="category-icon">🧢</span>
+                        <h3>KIDS</h3>
+                        <p>Mini drops con actitud</p>
+                    </div>
+                </a>
+
+                <a href="#" class="category-card">
+                    <div class="category-card-content">
+                        <span class="category-icon">⚡</span>
+                        <h3>DROPS</h3>
+                        <p>Exclusivas limitadas</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products Section -->
+<section class="featured-section">
+    <div class="featured-container">
+        <h2>NUEVOS LANZAMIENTOS</h2>
+        <div class="featured-items">
+            <div class="product">
+                <img src="img/denali-prod-1.png" alt="Hoodie Denali">
+                <h4>Hoodie Denali</h4>
+                <p class="product-description">Diseño premium con excelencia</p>
+                <a href="product-detail1.html" class="product-link">COMPRAR AHORA</a>
+            </div>
+            <div class="product">
+                <img src="img/denali-prod-2.png" alt="Camisa Oversized">
+                <h4>Camisa Oversized</h4>
+                <p class="product-description">Ajuste relajado de lujo</p>
+                <a href="product-detail3.html" class="product-link">COMPRAR AHORA</a>
+            </div>
+            <div class="product">
+                <img src="img/denali-prod-3.png" alt="Hoodie Edición Luna">
+                <h4>Hoodie Edición Luna</h4>
+                <p class="product-description">Pieza de edición limitada</p>
+                <a href="product-detail2.html" class="product-link">COMPRAR AHORA</a>
+            </div>
+            <div class="product">
+                <img src="img/denali-prod-2.png" alt="Sudadera Básica">
+                <h4>Sudadera Básica</h4>
+                <p class="product-description">Algodón puro y minimalista</p>
+                <a href="product-detail1.html" class="product-link">COMPRAR AHORA</a>
+            </div>
+            <div class="product">
+                <img src="img/denali-prod-1.png" alt="Pantalón Track">
+                <h4>Pantalón Track</h4>
+                <p class="product-description">Corte relajado premium</p>
+                <a href="product-detail3.html" class="product-link">COMPRAR AHORA</a>
+            </div>
+            <div class="product">
+                <img src="img/denali-prod-3.png" alt="Chaqueta Envolvente">
+                <h4>Chaqueta Envolvente</h4>
+                <p class="product-description">Lujo y comodidad absoluta</p>
+                <a href="product-detail2.html" class="product-link">COMPRAR AHORA</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Newsletter Section -->
+<section class="newsletter-section">
+    <div class="newsletter-container">
+        <h2>MANTENTE CONECTADO</h2>
+        <p>Suscríbete para recibir actualizaciones sobre nuevos lanzamientos y drops exclusivos</p>
+        <form class="newsletter-form">
+            <input type="email" placeholder="Ingresa tu email" required>
+            <button type="submit">SUSCRIBIRSE</button>
+        </form>
+    </div>
+</section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-right">
+            <!-- Shop Links -->
+            <div class="footer-section">
+                <h3>TIENDA</h3>
+                <ul>
+                    <li><a href="products.html">Todos los Productos</a></li>
+                    <li><a href="men-tops.html">Para Él</a></li>
+                    <li><a href="women-tops.html">Para Ella</a></li>
+                    <li><a href="#">Accesorios</a></li>
+                </ul>
+            </div>
+
+            <!-- Company Information Links -->
+            <div class="footer-section">
+                <h3>INFORMACIÓN</h3>
+                <ul>
+                    <li><a href="#">Sobre Nosotros</a></li>
+                    <li><a href="privacy.html">Política de Privacidad</a></li>
+                    <li><a href="#">Términos y Condiciones</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </div>
+
+            <!-- Support Links -->
+            <div class="footer-section">
+                <h3>SOPORTE</h3>
+                <ul>
+                    <li><a href="faq.html">Preguntas Frecuentes</a></li>
+                    <li><a href="#">Información de Envíos</a></li>
+                    <li><a href="#">Devoluciones</a></li>
+                    <li><a href="#">Guía de Tallas</a></li>
+                </ul>
+            </div>
+
+            <!-- Social Links -->
+            <div class="footer-section">
+                <h3>SÍGUENOS</h3>
+                <ul>
+                    <li><a href="https://www.instagram.com/__denali" target="_blank">Instagram</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">TikTok</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2024 DENALI LUXURY. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const mobileNav = document.getElementById('mobileNav');
+        
+        if (mobileMenuToggle) {
+            mobileMenuToggle.addEventListener('click', () => {
+                mobileMenuToggle.classList.toggle('active');
+                mobileNav.classList.toggle('active');
+            });
+            
+            // Close menu when clicking a link
+            const mobileLinks = mobileNav.querySelectorAll('a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenuToggle.classList.remove('active');
+                    mobileNav.classList.remove('active');
+                });
+            });
+        }
+        
+        // Update cart badge (placeholder)
+        function updateCartBadge() {
+            const cartBadge = document.querySelector('.cart-badge');
+            if (cartBadge) {
+                const cartCount = localStorage.getItem('cartCount') || '0';
+                cartBadge.textContent = cartCount;
+            }
+        }
+        
+        updateCartBadge();
+        window.addEventListener('cartUpdated', updateCartBadge);
+    </script>
+    <script>
+        // Register Service Worker for PWA
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('sw.js')
+                    .then(reg => console.log('Service Worker registered:', reg.scope))
+                    .catch(err => console.error('Service Worker registration failed:', err));
+            });
+        }
+    </script>
+</body>
+</html>
+
