@@ -1,8 +1,9 @@
 {
 	"name": "Denali Luxury",
 	"short_name": "Denali",
-	"start_url": "./",
-	"scope": "./",
+	"id": "../",
+	"start_url": "../index.html",
+	"scope": "../",
 	"display": "standalone",
 	"theme_color": "#0a1116",
 	"background_color": "#05080a",
